@@ -61,15 +61,15 @@
 }
 
 .card-container .card-wrapper:nth-child(3n) .card-title-wrapper {
-    background: aquamarine;
+    background: #f7cac9;
 }
 
 .card-container .card-wrapper:nth-child(3n - 1) .card-title-wrapper {
-    background: violet;
+    background: #c5b9cd;
 }
 
 .card-container .card-wrapper:nth-child(3n - 2) .card-title-wrapper {
-    background: dodgerblue;
+    background: #92a8d1;
 }
 
 .card-container .card-wrapper .card-title-wrapper .card-title {
@@ -128,18 +128,18 @@
 }
 
 .card-container .card-wrapper:nth-child(3n) .card-hover.card {
-    border-color: aquamarine;
-    box-shadow: 0 15px 0 aquamarine;
+    border-color: #f7cac9;
+    box-shadow: 0 15px 0 #f7cac9;
 }
 
 .card-container .card-wrapper:nth-child(3n - 1) .card-hover.card {
-    border-color: violet;
-    box-shadow: 0 15px 0 violet;
+    border-color: #c5b9cd;
+    box-shadow: 0 15px 0 #c5b9cd;
 }
 
 .card-container .card-wrapper:nth-child(3n - 2) .card-hover.card {
-    border-color: dodgerblue;
-    box-shadow: 0 15px 0 dodgerblue;
+    border-color: #92a8d1;
+    box-shadow: 0 15px 0 #92a8d1;
 }
 
 .card-container .card-btn-group {
