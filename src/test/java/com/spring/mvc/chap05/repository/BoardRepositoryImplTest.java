@@ -16,6 +16,7 @@ class BoardRepositoryImplTest {
     @Autowired
     private BoardRepository repository;
 
+
     @Test
     @DisplayName("게시글을 300개 저장해야 한다")
     void bulkInsertTest() {
@@ -33,6 +34,8 @@ class BoardRepositoryImplTest {
 
         // then
     }
+
+
 
     @Test
     @DisplayName("게시글을 전체 조회하면 300개의 글이 조회되어야 한다.")
