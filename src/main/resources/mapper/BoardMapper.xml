@@ -37,15 +37,20 @@
          ex) board_no : boardNo (o)  board_num : bnum (x)
 
          resultType에 List를 따로 언급할 필요 없습니다. -->
-    <select id="findAll" resultType="com.spring.mvc.chap05.entity.Board">
+    <select id="findAll" resultType="board">
         SELECT * FROM tbl_board
         ORDER BY board_no DESC
         LIMIT #{pageStart}, #{amount}
     </select>
 
-    <select id="findOne" resultType="com.spring.mvc.chap05.entity.Board">
+    <select id="findOne" resultType="board">
         SELECT * FROM tbl_board
         WHERE board_no = #{boardNo}
+    </select>
+
+    <select id="getCount" resultType="int">
+        SELECT COUNT(*)
+        FROM tbl_board
     </select>
 
 
