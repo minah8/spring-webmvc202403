@@ -38,7 +38,7 @@ class MemberServiceTest {
     @DisplayName("계정멍이 hong4321인 회원의 로그인 시도 결과를 상황별로 검증한다.")
     void loginTest() {
         // given
-        LoginRequestDTO.builder()
+        LoginRequestDTO dto = LoginRequestDTO.builder()
                 .account("hong4321")
                 .password("hhh4321!")
                 .build();

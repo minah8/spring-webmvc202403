@@ -8,8 +8,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import static com.spring.mvc.chap05.service.LoginResult.NO_ACC;
-import static com.spring.mvc.chap05.service.LoginResult.NO_PW;
+import static com.spring.mvc.chap05.service.LoginResult.*;
+
 
 @Service
 @RequiredArgsConstructor
@@ -50,9 +50,15 @@ public class MemberService {
             return NO_PW;
         }
 
-        System.out.println();
+        System.out.println(dto.getAccount() + "님 로그인 성공!");
+        return SUCCESS;
 
     }
 
 
+    public void checkDuplicateValue(String type, String keyword) {
+
+        return memberMapper.isDuplicate(type, keyword);
+
+    }
 }

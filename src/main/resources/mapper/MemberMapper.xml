@@ -19,7 +19,7 @@
     <select id="isDuplicate" resultType="boolean">
         SELECT COUNT(*)
         FROM tbl_member
-        <if test="type == 'account;">
+        <if test="type == 'account'">
             WHERE account = #{keyword}
         </if>
         <if test="type == 'email'">

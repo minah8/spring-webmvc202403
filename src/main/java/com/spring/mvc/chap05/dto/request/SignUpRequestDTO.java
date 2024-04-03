@@ -4,7 +4,14 @@ import com.spring.mvc.chap05.entity.Member;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.*;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
+@Getter @Setter @ToString
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class SignUpRequestDTO {
 
     @NotBlank
@@ -26,7 +33,7 @@ public class SignUpRequestDTO {
     public Member toEntity() {
         return Member.builder()
                 .account(account)
-                .password(encode(password))
+                .password(encoder.encode(password))
                 .name(name)
                 .email(email)
                 .build();
