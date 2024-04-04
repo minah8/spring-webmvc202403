@@ -47,7 +47,7 @@ public class MemberService {
 
         // matches(입력비번, 암호화된 비번) -> 둘이 일치하면 true, 일치하지 않으면 false
         // equals로 비교하시면 안되요!
-        if (encoder.matches(inputPassword, realPassword)) {
+        if (!encoder.matches(inputPassword, realPassword)) {
             System.out.println("비밀번호가 다르다!");
             return NO_PW;
         }

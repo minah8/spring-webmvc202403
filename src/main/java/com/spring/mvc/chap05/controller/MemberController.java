@@ -1,6 +1,6 @@
 package com.spring.mvc.chap05.controller;
 
-import com.mysql.cj.Session;
+import com.mysql.cj.log.Log;
 import com.spring.mvc.chap05.dto.request.LoginRequestDTO;
 import com.spring.mvc.chap05.dto.request.SignUpRequestDTO;
 import com.spring.mvc.chap05.service.LoginResult;
