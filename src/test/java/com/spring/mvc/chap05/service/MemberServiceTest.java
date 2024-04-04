@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static com.spring.mvc.chap05.service.LoginResult.NO_ACC;
 import static com.spring.mvc.chap05.service.LoginResult.SUCCESS;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -44,7 +43,7 @@ class MemberServiceTest {
                 .build();
 
         // when
-        LoginResult result = memberService.authenticate(dto);
+        LoginResult result = memberService.authenticate(dto, request.getSession(), response);
 
         // then
         assertEquals(SUCCESS, result);
