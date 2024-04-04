@@ -68,7 +68,7 @@ class MemberMapperTest {
         boolean emailFlag = memberMapper.isDuplicate("email", email);
 
         // then
-        assertFalse(emailFlags);
+        assertFalse(emailFlag);
     }
 
 }

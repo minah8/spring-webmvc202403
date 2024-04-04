@@ -44,6 +44,7 @@ public class AfterLoginInterceptor implements HandlerInterceptor {
             w.write(htmlCode);
             w.flush();
 
+            response.sendRedirect("/");
             return false; // 컨트롤러로 들어가는 요청을 막음.
         }
 
