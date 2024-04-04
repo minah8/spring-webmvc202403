@@ -58,7 +58,7 @@ public class MemberService {
     }
 
 
-    public void checkDuplicateValue(String type, String keyword) {
+    public boolean checkDuplicateValue(String type, String keyword) {
 
         return memberMapper.isDuplicate(type, keyword);
 
@@ -80,7 +80,7 @@ public class MemberService {
                 .account(foundMember.getAccount())
                 .name(foundMember.getName())
                 .email(foundMember.getEmail())
-                .build()
+                .build();
                 
         // 세션에 로그인한 회원 정보를 저장
         session.setAttribute("login", dto);

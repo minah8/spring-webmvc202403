@@ -30,7 +30,7 @@ public class SignUpRequestDTO {
     private String email;
 
     // dto를 엔터티로 변환하는 유틸메서드
-    public Member toEntity() {
+    public Member toEntity(PasswordEncoder encoder) {
         return Member.builder()
                 .account(account)
                 .password(encoder.encode(password))
