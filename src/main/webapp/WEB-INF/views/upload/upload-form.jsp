@@ -30,6 +30,10 @@
 
 <div class="upload-box">파일 첨부</div>
 
+<!--
+  파일 업로드는 기본적으로 post 방식 전송을 진행합니다.
+  enctype(인코딩 타입)을 multipart/form-data로 반드시 지정해야 전송됩니다.
+-->
 <form action="/upload-file" method="post" enctype="multipart/form-data">
   <input id="img-input" type="file" name="thumbnail" accept="image/*">
   <button type="submit">전송</button>
