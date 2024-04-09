@@ -47,6 +47,8 @@ public class SnsLoginController {
         params.put("code", code);
 
         snsLoginService.kakaoLogin(params);
+
+        return "";
     }
 
 }
