@@ -27,7 +27,7 @@ public class SnsLoginController {
     public String kakaoLogin() {
         String uri = "https://kauth.kakao.com/oauth/authorize";
         uri += "?client_id=" + kakaoAppKey;
-        uri += "&redirect_uri" + kakaoRedirectUri;
+        uri += "&redirect_uri=" + kakaoRedirectUri;
         uri += "&response_type=code";
 
         return "redirect:" + uri;
